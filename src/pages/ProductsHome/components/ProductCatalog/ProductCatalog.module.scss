@@ -1,0 +1,22 @@
+.ProductCatalog {
+    margin-left: 36px;
+    width: 100%;
+    p {
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 10px;
+    }
+
+    figure {
+        text-align: center;
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    .productsContainer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

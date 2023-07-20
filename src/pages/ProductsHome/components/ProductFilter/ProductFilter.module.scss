@@ -1,0 +1,19 @@
+.ProductFilter {
+    p {
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 10px;
+    }
+
+    .containerOptions {
+        margin-top: 10px;
+
+        .option {
+            margin: 5px 0;
+        }
+        
+        label {
+            font-family: "Roboto", sans-serif;
+            margin-left: 10px;
+        }
+    }
+}
