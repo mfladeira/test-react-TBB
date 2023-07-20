@@ -2,7 +2,7 @@
 
 ## Overview
 
-Projeto para teste técnico para TBB, onde o objetivo era criar um componente de listagem de produtos em que seja possível procurar pelo nome e filtrar pela categoria.
+Teste técnico para The Brooklyn Brothers, onde o objetivo era criar um componente de listagem de produtos em que seja possível procurar pelo nome e filtrar pela categoria.
 
 Technologies
 ------------------
