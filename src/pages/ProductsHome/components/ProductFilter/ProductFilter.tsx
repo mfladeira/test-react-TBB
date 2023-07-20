@@ -2,7 +2,7 @@ import styles from "./ProductFilter.module.scss";
 import products from "../../../../products.json";
 
 interface IProductFilter {
-    changeCategory: (category: string) => void;
+    onChange: (category: string) => void;
     category: string;
 }
 
@@ -25,7 +25,7 @@ export const ProductFilter = (props: IProductFilter) => {
                                 name="categories"
                                 value={category}
                                 onChange={(e) =>
-                                    props.changeCategory(e.target.value)
+                                    props.onChange(e.target.value)
                                 }
                             />
                             <label htmlFor={category}>{category}</label>
