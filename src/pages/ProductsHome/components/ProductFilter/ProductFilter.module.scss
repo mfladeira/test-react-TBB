@@ -1,6 +1,6 @@
 .ProductFilter {
-    min-width: 300px;
-    
+    width: 25%;
+
     p {
         font-family: "Roboto", sans-serif;
         margin-bottom: 10px;
@@ -11,8 +11,11 @@
 
         .option {
             margin: 5px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-        
+
         label {
             font-family: "Roboto", sans-serif;
             margin-left: 10px;
