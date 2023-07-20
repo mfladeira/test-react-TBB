@@ -1,9 +1,18 @@
 .ProductFilter {
     width: 25%;
 
-    p {
-        font-family: "Roboto", sans-serif;
-        margin-bottom: 10px;
+    .containerFilter {
+        display: flex;
+        justify-content: space-between;
+        p {
+            font-family: "Roboto", sans-serif;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 20px;
+            cursor: pointer;
+        }
     }
 
     .containerOptions {

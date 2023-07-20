@@ -7,30 +7,53 @@ interface IProductCatalog {
 }
 
 export const ProductCatalog = (props: IProductCatalog) => {
-    const productsFilteredByCategoryAndByName = products.data.nodes
-        .filter((product) => product.category.name === props.category)
-        .filter((product) =>
-            product.name
-                .toLocaleUpperCase()
-                .includes(props.filter.toLocaleUpperCase())
+    let productsFilteredByCategoryAndByName = [];
+
+    if (props.category !== "" && props.filter !== "") {
+        productsFilteredByCategoryAndByName = products.data.nodes
+            .filter((product) => product.category.name === props.category)
+            .filter((product) =>
+                product.name
+                    .toLocaleUpperCase()
+                    .includes(props.filter.toLocaleUpperCase())
+            );
+    } else if (props.filter !== "") {
+        productsFilteredByCategoryAndByName = products.data.nodes.filter(
+            (product) =>
+                product.name
+                    .toLocaleUpperCase()
+                    .includes(props.filter.toLocaleUpperCase())
         );
+    } else if (props.category !== "") {
+        productsFilteredByCategoryAndByName = products.data.nodes.filter(
+            (product) => product.category.name === props.category
+        );
+    } else {
+        productsFilteredByCategoryAndByName = products.data.nodes;
+    }
 
     return (
         <div className={styles.ProductCatalog}>
             <p>
-                <strong>{products.data.nodes.length}</strong> resultados
+                <strong>{productsFilteredByCategoryAndByName.length}</strong>{" "}
+                Resultados
             </p>
             <hr />
             <div className={styles.productsContainer}>
                 {productsFilteredByCategoryAndByName.map((product) => {
                     return (
-                        <figure key={product.id}>
-                            <img
-                                src={product.images[0].asset.url}
-                                alt="Trulli"
-                            />
-                            <figcaption>{product.name}</figcaption>
-                        </figure>
+                        <div
+                            className={styles.figureContainer}
+                            key={product.id}
+                        >
+                            <figure>
+                                <img
+                                    src={product.images[0].asset.url}
+                                    alt="Trulli"
+                                />
+                                <figcaption>{product.name}</figcaption>
+                            </figure>
+                        </div>
                     );
                 })}
             </div>
