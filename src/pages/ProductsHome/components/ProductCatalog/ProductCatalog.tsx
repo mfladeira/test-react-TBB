@@ -9,7 +9,7 @@ export const ProductCatalog = (props: IProductCatalog) => {
     const productsFilteres = products.data.nodes.filter(
         (product) => product.category.name === props.category
     );
-    
+
     return (
         <div className={styles.ProductCatalog}>
             <p>
