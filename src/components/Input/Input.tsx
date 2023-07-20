@@ -1,5 +1,4 @@
 import styles from "./Input.module.scss";
-// import lupa from "../../assets/lupa.svg";
 
 interface IInput {
     placeholder: string;

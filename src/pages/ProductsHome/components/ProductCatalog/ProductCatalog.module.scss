@@ -34,6 +34,14 @@
     }
 }
 
+@media (max-width: 750px) {
+    .ProductCatalog {
+        .productsContainer {
+            justify-content: center;
+        }
+    }
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
