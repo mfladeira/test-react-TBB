@@ -35,7 +35,9 @@ export const ProductFilter = (props: IProductFilter) => {
                                 value={category}
                                 onChange={(e) => props.onChange(e.target.value)}
                             />
-                            <label htmlFor={category}>{category}</label>
+                            <label htmlFor={category} title={category}>
+                                {category}
+                            </label>
                         </div>
                     );
                 })}
